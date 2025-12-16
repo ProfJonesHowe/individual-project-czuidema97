@@ -1,0 +1,160 @@
+/* Reset and setup */
+*, *::before, *::after
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body
+{
+  font-family: system-ui, sans-serif;
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Color variables */
+:root
+{
+  --primary: #7a4fd9;
+  --text: #ffffff;
+}
+
+/* Header layout */
+.site-header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111111;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+}
+
+/* Logo */
+.logo
+{
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation */
+.site-nav ul
+{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a
+{
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+/* Hover and active */
+.site-nav a:hover,
+.site-nav a.active
+{
+  background: var(--primary);
+}
+
+/* Menu toggle */
+.menu-toggle
+{
+  display: none;
+}
+
+/* Hamburger button */
+.menu-btn
+{
+  display: none;
+  font-size: 2rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Layout */
+.container
+{
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section
+{
+  margin-bottom: 2rem;
+}
+
+table
+{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, td
+{
+  border: 1px solid #333333;
+}
+
+td
+{
+  padding: 0.5rem;
+}
+
+img
+{
+  max-width: 100%;
+}
+
+/* Button */
+button
+{
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer
+{
+  text-align: center;
+  padding: 1rem;
+  background: #111111;
+}
+
+/* Mobile styles */
+@media (max-width: 768px)
+{
+  .menu-btn
+  {
+    display: block;
+  }
+
+  .site-nav ul
+  {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111111;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .menu-toggle:checked + .menu-btn + .site-nav ul
+  {
+    display: flex;
+  }
+}

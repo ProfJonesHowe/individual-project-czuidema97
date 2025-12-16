@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Penguins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#">Penguins</a>
+    <input id="menu-toggle" class="menu-toggle" type="checkbox">
+    <label class="menu-btn" for="menu-toggle">☰</label>
+    <nav class="site-nav">
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#interactive">Fun Fact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <h1>A Penguin Webpage</h1>
+
+    <section id="about">
+      <h2>About Penguins</h2>
+      <p>Penguins are flightless birds that live mostly in the Southern Hemisphere. They are strong swimmers and use their wings as flippers.</p>
+    </section>
+
+    <section>
+      <h2>Penguin Species</h2>
+      <table>
+        <tr>
+          <td>Emperor Penguin</td>
+          <td>Antarctica</td>
+          <td>48 inches</td>
+        </tr>
+        <tr>
+          <td>Adélie Penguin</td>
+          <td>Antarctic Coast</td>
+          <td>28 inches</td>
+        </tr>
+        <tr>
+          <td>Gentoo Penguin</td>
+          <td>Subantarctic Islands</td>
+          <td>30 inches</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="gallery">
+      <h2>Penguin Gallery</h2>
+      <figure>
+        <img src="EmperorPenguin.jpg" alt="Emperor Penguin">
+      </figure>
+      <figure>
+        <img src="Adelie.jpg"
+	alt="Adélie Penguin">
+      </figure>
+      <figure>
+        <img src="Gentoo.jpg" alt="Gentoo Penguin">
+      </figure>
+    </section>
+
+    <section id="video">
+      <h2>Penguins Video</h2>
+      <iframe width="560" height="315"
+        src="https://www.bing.com/videos/riverview/relatedvideo?q=penguin+videos&&mid=D3401B6EEEDA73182544D3401B6EEEDA73182544&mcid=02E4DE8993F94DE18ABFFC884B150992&FORM=VAMGZC"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="interactive">
+      <h2>Penguin Fun Fact</h2>
+      <p id="fact-output">Click the button to learn a penguin fact.</p>
+      <button onclick="showFact()">Show Penguin Fact</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>We Love Penguins!!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
